@@ -85,51 +85,57 @@
         <div class="section-title">
           <h2>login</h2>
           <div class="container">
-            <input type="text" id="username" onblur="usernameCheck()" class="form-control" placeholder="username">
+        아이디 <input type="text" id="username" onblur="usernameCheck()" class="form-control" placeholder="username">
             <p id="check-result"></p>
         <!--예제2) 비밀번호와 비밀번호 재확인을 비교해 일치하면 녹색 글씨로 일치합니다 / 
         일치하지 않으면 빨간색 글씨로 일치하지 않습니다.-->
-        비밀번호 <input type="text" id="pw1" placeholder="비밀번호 8~16자 숫자"><i class="bi bi-file-lock2"></i></br>
-        비밀번호 재확인 <input type="text" id="pw2" placeholder="비밀번호 확인" onblur="pwCheck()"><i id="lock" class="bi bi-file-lock2"style="color: gray "></i></br>
-        <p id=pw-check-result></p>
+        비밀번호 <input type="text" id="pw1">
+          <p id=pw-check-result></p>
+        로그인  <button onclick=login()>"로그인"</button>
+          <p id="logincheckresult">로그인 성공여부</p>
         </div>
         <script>
-          function usernameCheck(){
-              console.log("함수호출됨");
-              // input에 입력한 값 콘솔출력
-              const username = document.getElementById("username").value;
-              console.log(`username:  ${username}`);
-              const len = console.log(username.length);
-              //username이 글자수가 5~12자 이내면 좋아요 녹색으로 
-              //그렇지 않으면 "5~12자 이내로 작성해주세요." 빨간색으로
-              const checkResult = document.getElementById("check-result");
-              if (username.length>=5 && username.length<=12){
-                  checkResult.innerHTML="좋아요";
-                  checkResult.style.color="green";
-              }else if(username.length==0){
-                  checkResult.innerHTML="필수정보입니다."
-              }else{
-                  checkResult.innerHTML="5~12자 이내로 작성해주세요."
-                  checkResult.style.color="red";
-              }
-              }
-              function pwCheck(){
-              console.log("함수호출");    
-              const password1 = document.getElementById("pw1").value;
-              const password2 = document.getElementById("pw2").value;
-              const checkResult = document.getElementById("pw-check-result");
-              const lock = document.getElementById("lock");
-              if (password1==password2){
-                  checkResult.innerHTML = "일치합니다.";
-                  checkResult.style.color="green";
-                  lock.style.color = "green";
+          function login(){
+            console.log("함수호출됨");
+            const logincheckresult = document.getElementById("logincheckresult");
+            logincheckresult.innerHTML="로그인성공";
+          }
+          // function usernameCheck(){
+          //     console.log("함수호출됨");
+          //     // input에 입력한 값 콘솔출력
+          //     const username = document.getElementById("username").value;
+          //     console.log(`username:  ${username}`);
+          //     const len = console.log(username.length);
+          //     //username이 글자수가 5~12자 이내면 좋아요 녹색으로 
+          //     //그렇지 않으면 "5~12자 이내로 작성해주세요." 빨간색으로
+          //     const checkResult = document.getElementById("check-result");
+          //     if (username.length>=5 && username.length<=12){
+          //         checkResult.innerHTML="좋아요";
+          //         checkResult.style.color="green";
+          //     }else if(username.length==0){
+          //         checkResult.innerHTML="필수정보입니다."
+          //     }else{
+          //         checkResult.innerHTML="5~12자 이내로 작성해주세요."
+          //         checkResult.style.color="red";
+          //     }
+          //     }
+          //     function pwCheck(){
+          //     console.log("함수호출");    
+          //     const password1 = document.getElementById("pw1").value;
+          //     const password2 = document.getElementById("pw2").value;
+          //     const checkResult = document.getElementById("pw-check-result");
+          //     const lock = document.getElementById("lock");
+          //     if (password1==password2){
+          //         checkResult.innerHTML = "일치합니다.";
+          //         checkResult.style.color="green";
+          //         lock.style.color = "green";
 
-              }else{
-                  checkResult.innerHTML = "일치하지않습니다.";
-                  checkResult.style.color="red";        
-                  lock.style.color = "red";
-              }
-            }
+          //     }else{
+          //         checkResult.innerHTML = "일치하지않습니다.";
+          //         checkResult.style.color="red";        
+          //         lock.style.color = "red";
+          //     }
+          //   }
               
       </script>
         <div class="row">
@@ -141,8 +147,8 @@
                 </svg>
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><a href="">회원가입</a></h4>
+              <p>JOIN US</p>
             </div>
           </div>
         </div>
