@@ -5,9 +5,26 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>login - Sohee Portfolio</title>
+  <title>join us - Sohee Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+
+  <style>
+.container1 {
+  width: 70%;
+  height: 70%;
+  margin: 40px auto;
+}
+.container2 {
+  width: 70%;
+  height: 70%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 800px;
+  margin-right: 0px
+}
+</style>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -67,22 +84,48 @@
   </header><!-- End Header -->
 
   <main id="main">
-        <!-- ======= join Section ======= -->
+    <!-- <form id="join_form" method="post" action="/user2/V2Join?m=end">
+      <input type="hidden" id="encPswd" name="encPswd" value="">
+      <input type="hidden" id="token_sjoin" name="token_sjoin" value="UeUgbOnvRzV87uy1">
+      <input type="hidden" id="encKey" name="encKey" value="">
+      <input type="hidden" id="birthday" name="birthday" value="">
+      <input type="hidden" id="joinMode" name="joinMode" value="unreal">
+      <input type="hidden" id="pbirthday" name="pbirthday" value="">
+      <input type="hidden" id="ipinFlag" name="ipinFlag" value="">
+      <input type="hidden" id="nid_kb2" name="nid_kb2" value="">
+
+    </form> -->
+
+
+    <!-- ======= join Section ======= -->
     <section id="join" class="join">
-      <div class="container" data-aos="fade-up">
+      <!-- <div class="container" data-aos="fade-up"> -->
         <div class="section-title">
           <h2>login</h2>
-              ID <input type="text" id="username">
-              <p id="check-result"></p>
-            </br>
-              Pw <input type="text" id="pw1">
-              <p id=pw-check-result></p></br></br>
-              <button onclick=login()>Login</button></br></br>
-          <p id="logincheckresult">로그인 성공여부</p></br></br>
-          <h4><a href="signup.html">JOIN US</a></h4></br>
-              <p>Not a member yet? Join us</p>
         </div>
-      </div>
+
+        <!-- 아이디 <input type="text" id="username" class="form-control" placeholder="username">
+            <p id="check-result"></p>
+          
+        예제2) 비밀번호와 비밀번호 재확인을 비교해 일치하면 녹색 글씨로 일치합니다 / 
+        일치하지 않으면 빨간색 글씨로 일치하지 않습니다.-->
+        <!-- 비밀번호 <input type="text" id="pw1">
+          <p id=pw-check-result></p>
+        <button onclick=login()>로그인</button>
+          <p id="logincheckresult">로그인 성공여부</p> -->
+          <div class="container1">
+              아이디 <input type="text" id="username" placeholder="username">
+              <p id="check-result"></p>
+              비밀번호 <input type="text" id="pw1">
+              <p id=pw-check-result></p>
+            </div>
+            <div class="container2">
+              <button onclick=login()>로그인</button>
+          <p id="logincheckresult">로그인 성공여부</p>
+        </div>
+       
+      
+        
         <script>
           function login(){
             console.log("함수호출됨");
@@ -91,7 +134,11 @@
           }
 
       </script>
-
+             <div class="container1">
+              <h4><a href="signup.html">JOIN US</a></h4>
+              <p>회원가입</p>
+            </div>
+      </div>
     </section><!-- End join Section -->
 
   </main><!-- End #main -->

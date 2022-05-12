@@ -8,16 +8,7 @@
   <title>join us - Sohee Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <style>
-  .container1 {
-    width: 70%;
-    height: 70%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 0px
-  }
-</style>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -74,130 +65,97 @@
   </header><!-- End Header -->
 
   <main id="main">
+    <!-- <form id="join_form" method="post" action="/user2/V2Join?m=end">
+      <input type="hidden" id="encPswd" name="encPswd" value="">
+      <input type="hidden" id="token_sjoin" name="token_sjoin" value="UeUgbOnvRzV87uy1">
+      <input type="hidden" id="encKey" name="encKey" value="">
+      <input type="hidden" id="birthday" name="birthday" value="">
+      <input type="hidden" id="joinMode" name="joinMode" value="unreal">
+      <input type="hidden" id="pbirthday" name="pbirthday" value="">
+      <input type="hidden" id="ipinFlag" name="ipinFlag" value="">
+      <input type="hidden" id="nid_kb2" name="nid_kb2" value="">
+
+    </form> -->
+
+
     <!-- ======= join Section ======= -->
     <section id="join" class="join">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Join us</h2>
-          <div class="container1">
-            <div align="left">
-            아이디<br>
-            <input type="text" id="username" onblur="usernameCheck()"placeholder="5~12자 이내로 작성">
-            <input type="button" name="user_IDcheck" value="아이디 확인">
+          <h2>login</h2>
+          
+        아이디 <input type="text" id="username" onblur="usernameCheck()" class="form-control" placeholder="username">
             <p id="check-result"></p>
-            <br>
-            비밀번호<br>
-            <input type="password" id="pw1" placeholder="비밀번호 8~16자 숫자"><i class="bi bi-file-lock2"></i></br>
-            <br>비밀번호 재확인<br>
-            <input type="password" id="pw2" placeholder="비밀번호 확인" onblur="pwCheck()"><i id="lock" class="bi bi-file-lock2"style="color: gray "></i></br>
-        <p id=pw-check-result></p>
-            <br>
-            이름<br>  <input type="text" name="user_name" value=""> <br></br>
-            생년월일<br> 
-            <select name="year">
-              <option value="">-- 선택 --</option>
-              <option value="1987">1987</option>
-              <option value="1988">1988</option>
-              <option value="1989">1989</option>
-              <option value="1990">1990</option>
-              <option value="1991">1991</option>
-              <option value="1992">1992</option>
-              <option value="1993">1993</option>
-              <option value="1994">1994</option>
-              <option value="1995">1995</option>
-              <option value="1996">1996</option>
-              <option value="1997">1997</option>
-              <option value="1998">1998</option>
-              <option value="1999">1999</option>
-              <option value="2000">2000</option>
-            </select>
-            <select name="month">
-              <option value="">-- 선택 --</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
-            <select name="day">
-              <option value="">-- 선택 --</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-            </select>
-            <br><br>
-            성별<br>  
-            <label for="man">남자</label>
-            <input type="radio" name="gender" value="m" id="man">
-            <label for="woman">여자</label>
-            <input type="radio" name="gender" value="m" id="woman"> <br><br>
-            주소 <br>
-            <input type="text" id="sample6_postcode" placeholder="우편번호">
-            <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br><br>
-            <input type="text" id="sample6_address" placeholder="주소"><br><br>
-            <input type="text" id="sample6_detailAddress" placeholder="상세주소"><br><br>
-            <input type="text" id="sample6_extraAddress" placeholder="참고항목"><br><br>
-            이메일<br><input type="text" id="userid" onblur="userCheck()"> @
-            <input type="text" id="userEmail">
-            <select id="id1" onchange="idSelect()">
-                <option value="naver.com">naver.com</option>
-                <option value="daum.net">daum.net</option>
-                <option value="nate.com">nate.com</option>
-                <option value="korea.com">korea.com</option>
-              </select>
-              <p id="select-result"></p>
-            </br>
-            휴대전화<br>  
-            <input type="text" name="user_phone" placeholder="010-****-****">
-            <input type="button" name="certification" value="인증번호 받기"><br></br>
-            <input type="text" name="certification" placeholder="인증번호를 입력하세요">
-            <input type="button" name="certification" value="확인"><br><br>
-            관심사<br> 
-            IT<input type="checkbox" name="check" value="hobby1">
-            보안<input type="checkbox" name="check" value="hobby2">
-            웹<input type="checkbox" name="check" value="hobby3">
-            서버<input type="checkbox" name="check" value="hobby4">
-            <br><br>
-            <input type="submit" name="" value="제출">
           </div>
+        <!--예제2) 비밀번호와 비밀번호 재확인을 비교해 일치하면 녹색 글씨로 일치합니다 / 
+        일치하지 않으면 빨간색 글씨로 일치하지 않습니다.-->
+        <div class="container">
+        비밀번호 <input type="text" id="pw1">
+          <p id=pw-check-result></p>
+        </div>
+        <button onclick=login()>로그인</button>
+          <p id="logincheckresult">로그인 성공여부</p>
+        
+        <script>
+          function login(){
+            console.log("함수호출됨");
+            const logincheckresult = document.getElementById("logincheckresult");
+            logincheckresult.innerHTML="로그인성공";
+          }
+          // function usernameCheck(){
+          //     console.log("함수호출됨");
+          //     // input에 입력한 값 콘솔출력
+          //     const username = document.getElementById("username").value;
+          //     console.log(`username:  ${username}`);
+          //     const len = console.log(username.length);
+          //     //username이 글자수가 5~12자 이내면 좋아요 녹색으로 
+          //     //그렇지 않으면 "5~12자 이내로 작성해주세요." 빨간색으로
+          //     const checkResult = document.getElementById("check-result");
+          //     if (username.length>=5 && username.length<=12){
+          //         checkResult.innerHTML="좋아요";
+          //         checkResult.style.color="green";
+          //     }else if(username.length==0){
+          //         checkResult.innerHTML="필수정보입니다."
+          //     }else{
+          //         checkResult.innerHTML="5~12자 이내로 작성해주세요."
+          //         checkResult.style.color="red";
+          //     }
+          //     }
+          //     function pwCheck(){
+          //     console.log("함수호출");    
+          //     const password1 = document.getElementById("pw1").value;
+          //     const password2 = document.getElementById("pw2").value;
+          //     const checkResult = document.getElementById("pw-check-result");
+          //     const lock = document.getElementById("lock");
+          //     if (password1==password2){
+          //         checkResult.innerHTML = "일치합니다.";
+          //         checkResult.style.color="green";
+          //         lock.style.color = "green";
+
+          //     }else{
+          //         checkResult.innerHTML = "일치하지않습니다.";
+          //         checkResult.style.color="red";        
+          //         lock.style.color = "red";
+          //     }
+          //   }
+              
+      </script>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+                </svg>
+                <i class="bx bxl-dribbble"></i>
+              </div>
+              <h4><a href="">회원가입</a></h4>
+              <p>JOIN US</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
     </section><!-- End join Section -->
 
   </main><!-- End #main -->
@@ -222,110 +180,6 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script>
-    function sample6_execDaumPostcode() {
-        new daum.Postcode({
-            oncomplete: function(data) {
-                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-                var addr = ''; // 주소 변수
-                var extraAddr = ''; // 참고항목 변수
-
-                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-                    addr = data.roadAddress;
-                } else { // 사용자가 지번 주소를 선택했을 경우(J)
-                    addr = data.jibunAddress;
-                }
-
-                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
-                if(data.userSelectedType === 'R'){
-                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-                        extraAddr += data.bname;
-                    }
-                    // 건물명이 있고, 공동주택일 경우 추가한다.
-                    if(data.buildingName !== '' && data.apartment === 'Y'){
-                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                    }
-                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-                    if(extraAddr !== ''){
-                        extraAddr = ' (' + extraAddr + ')';
-                    }
-                    // 조합된 참고항목을 해당 필드에 넣는다.
-                    document.getElementById("sample6_extraAddress").value = extraAddr;
-                
-                } else {
-                    document.getElementById("sample6_extraAddress").value = '';
-                }
-
-                // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                document.getElementById('sample6_postcode').value = data.zonecode;
-                document.getElementById("sample6_address").value = addr;
-                // 커서를 상세주소 필드로 이동한다.
-                document.getElementById("sample6_detailAddress").focus();
-            }
-        }).open();
-    }
-</script>
-  <script>
-    function pwCheck(){
-        console.log("함수호출");    
-        const password1 = document.getElementById("pw1").value;
-        const password2 = document.getElementById("pw2").value;
-        const checkResult = document.getElementById("pw-check-result");
-        const lock = document.getElementById("lock");
-        if (password1==password2){
-            checkResult.innerHTML = "일치합니다.";
-            checkResult.style.color="green";
-            lock.style.color = "green";
-
-        }else{
-            checkResult.innerHTML = "일치하지않습니다.";
-            checkResult.style.color="red";        
-            lock.style.color = "red";
-        }
-    }
-</script>
-  <script>
-    function usernameCheck(){
-        console.log("함수호출됨");
-        // input에 입력한 값 콘솔출력
-        const username = document.getElementById("username").value;
-        console.log(`username:  ${username}`);
-        const len = console.log(username.length);
-        //username이 글자수가 5~12자 이내면 좋아요 녹색으로 
-        //그렇지 않으면 "5~12자 이내로 작성해주세요." 빨간색으로
-        const checkResult = document.getElementById("check-result");
-        if (username.length>=5 && username.length<=12){
-            checkResult.innerHTML="good!";
-            checkResult.style.color="green";
-        }else if(username.length==0){
-            checkResult.innerHTML="필수정보입니다."
-        }else{
-            checkResult.innerHTML="5~12자 이내로 작성해주세요."
-            checkResult.style.color="red";
-        }
-        }
-  </script>
-  <script>
-    function idSelect(){
-        const id1 = document.getElementById("id1").value;
-        console.log(`선택한 이메일: ${id1}`);
-        document.getElementById("userEmail").value = id1;
-    }
-    function userCheck(){
-        const userid = document.getElementById("userid").value;
-        const selectResult = document.getElementById("select-result");
-        if(userid.length==0){
-            selectResult.innerHTML = "필수입력입니다."
-        }
-    }
-</script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
