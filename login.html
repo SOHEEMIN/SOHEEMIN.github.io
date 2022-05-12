@@ -10,6 +10,38 @@
   <meta content="" name="keywords">
 
   <style>
+    * {
+    font-family: 맑은고딕;
+    font-weight: bold;
+}
+ 
+#wrap {
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: rgb(107, 201, 170);
+}
+ 
+.login_form {
+    padding: 20px 50px;
+}
+ 
+input {
+    margin-bottom: 14px;
+    width: 290px;
+    height: 30px;
+    font-size: 16px;
+    border: lightgray;
+}
+ 
+button {
+    width: 294px;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid whitesmoke;
+}
 .container1 {
   width: 70%;
   height: 70%;
@@ -20,7 +52,7 @@
   height: 70%;
   margin-top: 10px;
   margin-bottom: 20px;
-  margin-left: 800px;
+  margin-left: 600px;
   margin-right: 0px
 }
 </style>
@@ -49,9 +81,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
-
-
 </head>
 
 <body>
@@ -78,67 +107,40 @@
       <div class="header-social-links">
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
-
     </div>
-
   </header><!-- End Header -->
 
   <main id="main">
-    <!-- <form id="join_form" method="post" action="/user2/V2Join?m=end">
-      <input type="hidden" id="encPswd" name="encPswd" value="">
-      <input type="hidden" id="token_sjoin" name="token_sjoin" value="UeUgbOnvRzV87uy1">
-      <input type="hidden" id="encKey" name="encKey" value="">
-      <input type="hidden" id="birthday" name="birthday" value="">
-      <input type="hidden" id="joinMode" name="joinMode" value="unreal">
-      <input type="hidden" id="pbirthday" name="pbirthday" value="">
-      <input type="hidden" id="ipinFlag" name="ipinFlag" value="">
-      <input type="hidden" id="nid_kb2" name="nid_kb2" value="">
-
-    </form> -->
-
-
     <!-- ======= join Section ======= -->
     <section id="join" class="join">
       <!-- <div class="container" data-aos="fade-up"> -->
         <div class="section-title">
           <h2>login</h2>
-        </div>
-
-        <!-- 아이디 <input type="text" id="username" class="form-control" placeholder="username">
-            <p id="check-result"></p>
-          
-        예제2) 비밀번호와 비밀번호 재확인을 비교해 일치하면 녹색 글씨로 일치합니다 / 
-        일치하지 않으면 빨간색 글씨로 일치하지 않습니다.-->
-        <!-- 비밀번호 <input type="text" id="pw1">
-          <p id=pw-check-result></p>
-        <button onclick=login()>로그인</button>
-          <p id="logincheckresult">로그인 성공여부</p> -->
-          <div class="container1">
-              아이디 <input type="text" id="username" placeholder="username">
-              <p id="check-result"></p>
-              비밀번호 <input type="text" id="pw1">
-              <p id=pw-check-result></p>
+        <div id="wrap" class="container1">
+          <form class="login_form"></br>
+              ID</br></br>
+              <input type="text" id="username" placeholder="username">
+              <p id="check-result"></p></br></br>
+              PASSWORD</br></br>
+              <input type="password" id="pw1">
+              <p id=pw-check-result></p></br>
             </div>
-            <div class="container2">
-              <button onclick=login()>로그인</button>
-          <p id="logincheckresult">로그인 성공여부</p>
+            <div class="container1">
+              <button onclick=login()>Login</button>
+          <p id="logincheckresult">로그인 성공여부</p></br></br>
+            <h4><a href="signup.html">Click here!</a></h4>
+            <p>Not a member yet? Join us.</p>
+            </form>
+          </div>     
         </div>
-       
-      
-        
+  
         <script>
           function login(){
             console.log("함수호출됨");
             const logincheckresult = document.getElementById("logincheckresult");
             logincheckresult.innerHTML="로그인성공";
           }
-
       </script>
-             <div class="container1">
-              <h4><a href="signup.html">JOIN US</a></h4>
-              <p>회원가입</p>
-            </div>
-      </div>
     </section><!-- End join Section -->
 
   </main><!-- End #main -->

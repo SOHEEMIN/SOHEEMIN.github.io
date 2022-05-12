@@ -1,14 +1,28 @@
+```jsx
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>join us - Sohee Portfolio</title>
+  <title>login - Sohee Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <style>
+.container1 {
+  width: 70%;
+  height: 70%;
+  margin: 40px auto;
+}
+.container2 {
+  width: 70%;
+  height: 70%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 800px;
+  margin-right: 0px
+}
+</style>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -33,6 +47,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
 </head>
 
 <body>
@@ -65,99 +80,52 @@
   </header><!-- End Header -->
 
   <main id="main">
-    <!-- <form id="join_form" method="post" action="/user2/V2Join?m=end">
-      <input type="hidden" id="encPswd" name="encPswd" value="">
-      <input type="hidden" id="token_sjoin" name="token_sjoin" value="UeUgbOnvRzV87uy1">
-      <input type="hidden" id="encKey" name="encKey" value="">
-      <input type="hidden" id="birthday" name="birthday" value="">
-      <input type="hidden" id="joinMode" name="joinMode" value="unreal">
-      <input type="hidden" id="pbirthday" name="pbirthday" value="">
-      <input type="hidden" id="ipinFlag" name="ipinFlag" value="">
-      <input type="hidden" id="nid_kb2" name="nid_kb2" value="">
-
-    </form> -->
-
-
-    <!-- ======= join Section ======= -->
+        <!-- ======= join Section ======= -->
     <section id="join" class="join">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>login</h2>
-          
-        아이디 <input type="text" id="username" onblur="usernameCheck()" class="form-control" placeholder="username">
-            <p id="check-result"></p>
-          </div>
-        <!--예제2) 비밀번호와 비밀번호 재확인을 비교해 일치하면 녹색 글씨로 일치합니다 / 
-        일치하지 않으면 빨간색 글씨로 일치하지 않습니다.-->
-        <div class="container">
-        비밀번호 <input type="text" id="pw1">
-          <p id=pw-check-result></p>
+              ID <input type="text" id="username">
+              <p id="check-result"></p>
+            </br>
+              Pw <input type="text" id="pw1">
+              <p id=pw-check-result></p></br></br>
+              <button onclick=login()>Login</button></br></br>
+          <p id="logincheckresult">로그인 성공여부</p></br></br>
+          <h4><a href="signup.html">JOIN US</a></h4></br>
+              <p>Not a member yet? Join us</p>
         </div>
-        <button onclick=login()>로그인</button>
+      </div>
+    <!-- ======= join Section ======= -->
+    <section id="join" class="join">
+      <!-- <div class="container" data-aos="fade-up"> -->
+        <div class="section-title">
+          <h2>login</h2>
+        </div>
+          <div class="container1">
+              아이디 <input type="text" id="username" placeholder="username">
+              <p id="check-result"></p>
+              비밀번호 <input type="text" id="pw1">
+              <p id=pw-check-result></p>
+            </div>
+            <div class="container2">
+              <button onclick=login()>로그인</button>
           <p id="logincheckresult">로그인 성공여부</p>
-        
+        </div>
         <script>
           function login(){
             console.log("함수호출됨");
             const logincheckresult = document.getElementById("logincheckresult");
             logincheckresult.innerHTML="로그인성공";
           }
-          // function usernameCheck(){
-          //     console.log("함수호출됨");
-          //     // input에 입력한 값 콘솔출력
-          //     const username = document.getElementById("username").value;
-          //     console.log(`username:  ${username}`);
-          //     const len = console.log(username.length);
-          //     //username이 글자수가 5~12자 이내면 좋아요 녹색으로 
-          //     //그렇지 않으면 "5~12자 이내로 작성해주세요." 빨간색으로
-          //     const checkResult = document.getElementById("check-result");
-          //     if (username.length>=5 && username.length<=12){
-          //         checkResult.innerHTML="좋아요";
-          //         checkResult.style.color="green";
-          //     }else if(username.length==0){
-          //         checkResult.innerHTML="필수정보입니다."
-          //     }else{
-          //         checkResult.innerHTML="5~12자 이내로 작성해주세요."
-          //         checkResult.style.color="red";
-          //     }
-          //     }
-          //     function pwCheck(){
-          //     console.log("함수호출");    
-          //     const password1 = document.getElementById("pw1").value;
-          //     const password2 = document.getElementById("pw2").value;
-          //     const checkResult = document.getElementById("pw-check-result");
-          //     const lock = document.getElementById("lock");
-          //     if (password1==password2){
-          //         checkResult.innerHTML = "일치합니다.";
-          //         checkResult.style.color="green";
-          //         lock.style.color = "green";
-
-          //     }else{
-          //         checkResult.innerHTML = "일치하지않습니다.";
-          //         checkResult.style.color="red";        
-          //         lock.style.color = "red";
-          //     }
-          //   }
-              
       </script>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-blue">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
-                </svg>
-                <i class="bx bxl-dribbble"></i>
-              </div>
-              <h4><a href="">회원가입</a></h4>
-              <p>JOIN US</p>
+             <div class="container1">
+              <h4><a href="signup.html">JOIN US</a></h4>
+              <p>회원가입</p>
             </div>
-          </div>
-        </div>
       </div>
-    </div>
-    </section><!-- End join Section -->
-
+    </section>
+    <!-- End join Section -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -195,3 +163,4 @@
 </body>
 
 </html>
+```
