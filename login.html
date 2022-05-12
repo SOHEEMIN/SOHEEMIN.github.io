@@ -5,10 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Sohee Portfolio - Index</title>
+  <title>login - Sohee Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -33,6 +32,9 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
+
 </head>
 
 <body>
@@ -47,11 +49,11 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a class="active" href="login.html">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -64,14 +66,35 @@
 
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Sohee Min</h1>
-      <h2>programmer</h2>
-      <a href="about.html" class="btn-about">About Me</a>
-    </div>
-  </section><!-- End Hero -->
+  <main id="main">
+        <!-- ======= join Section ======= -->
+    <section id="join" class="join">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>login</h2>
+              ID <input type="text" id="username">
+              <p id="check-result"></p>
+            </br>
+              Pw <input type="text" id="pw1">
+              <p id=pw-check-result></p></br></br>
+              <button onclick=login()>Login</button></br></br>
+          <p id="logincheckresult">로그인 성공여부</p></br></br>
+          <h4><a href="signup.html">JOIN US</a></h4></br>
+              <p>Not a member yet? Join us</p>
+        </div>
+      </div>
+        <script>
+          function login(){
+            console.log("함수호출됨");
+            const logincheckresult = document.getElementById("logincheckresult");
+            logincheckresult.innerHTML="로그인성공";
+          }
+
+      </script>
+
+    </section><!-- End join Section -->
+
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
