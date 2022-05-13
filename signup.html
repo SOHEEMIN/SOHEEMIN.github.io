@@ -115,8 +115,11 @@ input::placeholder {
             <br>
             <p style=font-weight:bold>이름</p>
             <input type="text" name="user_name" value=""> <br></br>
-            <p style=font-weight:bold>생년월일</p>
-            <select name="year">
+            <p style=font-weight:bold>
+            생년월일</p>
+            <div class="row">
+            <div class="col-md-4">
+            <select name="year" class="form-select" >
               <option value="">-- 선택 --</option>
               <option value="1987">1987</option>
               <option value="1988">1988</option>
@@ -133,7 +136,9 @@ input::placeholder {
               <option value="1999">1999</option>
               <option value="2000">2000</option>
             </select>
-            <select name="month">
+          </div>
+          <div class="col-md-4">
+            <select name="month" class="form-select" >
               <option value="">-- 선택 --</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -148,7 +153,9 @@ input::placeholder {
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <select name="day">
+          </div>
+          <div class="col-md-4">
+            <select name="day" class="form-select" >
               <option value="">-- 선택 --</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -182,7 +189,9 @@ input::placeholder {
               <option value="30">30</option>
               <option value="31">31</option>
             </select>
-            <br><br>
+          </div>
+        </div>
+            <br>
             <p style=font-weight:bold>성별</p>
             <label for="man">남자</label>
             <input type="radio" name="gender" value="m" id="man" style="height:15px; width:35px; vertical-align: middle;">
@@ -194,16 +203,26 @@ input::placeholder {
             <input type="text" id="sample6_address" placeholder="  주소"><br><br>
             <input type="text" id="sample6_detailAddress" placeholder="  상세주소"><br><br>
             <input type="text" id="sample6_extraAddress" placeholder="  참고항목"><br><br>
-            <p style=font-weight:bold>이메일</p>
-            <input type="text" style="width: 220px;" id="userid" onblur="userCheck()">@
+            <p style=font-weight:bold >이메일</p>
+            <div class="row">
+            <div class="col-md-4">
+            <input type="text" style="width: 220px;" id="userid" onblur="userCheck()">
+          </div>
+           <div class="col-md-4">
             <input type="text" style="width: 220px;" id="userEmail">
-            <select id="id1" onchange="idSelect()">
+            </div>
+            <div class="col-md-4">
+            <select id="id1" class="form-select" class="form-select" onchange="idSelect()">
+
                 <option value="naver.com">naver.com</option>
                 <option value="daum.net">daum.net</option>
                 <option value="nate.com">nate.com</option>
                 <option value="korea.com">korea.com</option>
               </select>
               <p id="select-result"></p>
+            </div>
+          </div>
+
             </br>
             <p style=font-weight:bold>휴대전화</p>
             <input type="text" name="user_phone" placeholder="  010-****-****">
