@@ -9,14 +9,39 @@
   <meta content="" name="keywords">
 
   <style>
-  .container1 {
-    width: 70%;
-    height: 70%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 0px
-  }
+.container1 {
+  width: 70%;
+  height: 70%;
+  margin: 40px auto;
+}
+#wrap {
+    width: 700px;
+    height: 1200px;
+    border-radius: 5px;
+    background-color: rgba(126, 197, 170, 0.3);
+    font-family: 고딕체;
+}
+ 
+.login_form {
+    padding: 20px 50px;
+}
+ 
+input {
+    margin-bottom: 14px;
+    width: 210px;
+    height: 30px;
+    font-size: 12px;
+    border: lightgray;
+}
+ 
+button {
+    width: 1px;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid whitesmoke;
+}
 </style>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -81,11 +106,11 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Join us</h2>
-          <div class="container1">
+            <div id="wrap" class="container1" >
+              <form class="login_form"></br>
             <div align="left">
             아이디<br>
             <input type="text" id="username" onblur="usernameCheck()"placeholder="5~12자 이내로 작성">
-            <input type="button" name="user_IDcheck" value="아이디 확인">
             <p id="check-result"></p>
             <br>
             비밀번호<br>
@@ -165,12 +190,12 @@
             <br><br>
             성별<br>  
             <label for="man">남자</label>
-            <input type="radio" name="gender" value="m" id="man">
+            <input type="radio" name="gender" value="m" id="man" style="height:15px; width:35px; vertical-align: middle;">
             <label for="woman">여자</label>
-            <input type="radio" name="gender" value="m" id="woman"> <br><br>
+            <input type="radio" name="gender" value="m" id="woman" style="height:15px; width:35px; vertical-align: middle;"> <br><br>
             주소 <br>
             <input type="text" id="sample6_postcode" placeholder="우편번호">
-            <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br><br>
+            <input type="button" onclick="sample6_execDaumPostcode()" style="width:150px" value="우편번호 찾기" ><br><br>
             <input type="text" id="sample6_address" placeholder="주소"><br><br>
             <input type="text" id="sample6_detailAddress" placeholder="상세주소"><br><br>
             <input type="text" id="sample6_extraAddress" placeholder="참고항목"><br><br>
@@ -186,20 +211,15 @@
             </br>
             휴대전화<br>  
             <input type="text" name="user_phone" placeholder="010-****-****">
-            <input type="button" name="certification" value="인증번호 받기"><br></br>
+            <input type="button" name="certification" style="width:150px" value="인증번호 받기"><br></br>
             <input type="text" name="certification" placeholder="인증번호를 입력하세요">
-            <input type="button" name="certification" value="확인"><br><br>
-            관심사<br> 
-            IT<input type="checkbox" name="check" value="hobby1">
-            보안<input type="checkbox" name="check" value="hobby2">
-            웹<input type="checkbox" name="check" value="hobby3">
-            서버<input type="checkbox" name="check" value="hobby4">
+            <input type="button" name="certification" style="width:150px" value="확인"><br><br>
             <br><br>
-            <input type="submit" name="" value="제출">
+            <input type="submit" name="" style="width:150px" value="제출">
+          </form>
           </div>
       </div>
     </div>
-  </div>
     </section><!-- End join Section -->
   </main><!-- End #main -->
 
@@ -280,7 +300,11 @@
         const password2 = document.getElementById("pw2").value;
         const checkResult = document.getElementById("pw-check-result");
         const lock = document.getElementById("lock");
-        if (password1==password2){
+        if (password1.length==0){
+          checkResult.innerHTML = "필수 정보입니다.";
+          checkResult.style.color="red";
+        }
+        else if (password1==password2){
             checkResult.innerHTML = "일치합니다.";
             checkResult.style.color="green";
             lock.style.color = "green";
@@ -307,6 +331,7 @@
             checkResult.style.color="green";
         }else if(username.length==0){
             checkResult.innerHTML="필수정보입니다."
+            checkResult.style.color="red";
         }else{
             checkResult.innerHTML="5~12자 이내로 작성해주세요."
             checkResult.style.color="red";
